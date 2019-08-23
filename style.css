@@ -3,3 +3,41 @@
   padding: 0;
   box-sizing: content-box;
 }
+.top{
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+
+.top_logo img{
+  width: 379px;
+}
+
+.menu{
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.menu_item{
+  list-style: none;
+}
+
+.menu_item a{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Livvic", sans-serif;
+}
+
+.menu_item img{
+  width: 43px;
+}
+
+.mainText_subtitle{
+  font-family: "Livvic", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+
+}
