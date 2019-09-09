@@ -1,5 +1,5 @@
 function handleLoad(){
-  //Gallery :D
+  //-------------------------------------------Gallery ----------------------------------------
   var button = document.querySelector('.gallery__button');
   var slider = document.querySelector('.gallery');
   var tape = slider.querySelector('.gallery__tape');
@@ -29,8 +29,27 @@ function handleLoad(){
       count = 0;
     }
   }
-
   button.addEventListener('click', handleClick);
+
+  // ----------------------------------- Bamboo paper ---------------------
+
+  var rangeSlider = document.querySelector('.mainText__range');
+  var paperImages = document.querySelector('.mainImage__paper');
+  var source = paperImages.getAttribute("src");
+
+
+
+   function handleRange() {
+     var rangeValue = rangeSlider.value;
+     var floatValue = rangeValue/9;
+     var indexValue = Math.floor(floatValue);
+       paperImages.setAttribute( 'src', "./img/paper_"+indexValue+".png" ) ;
+     console.log(source);
+     console.log(indexValue);
+   }
+
+   rangeSlider.addEventListener('input', handleRange);
+
 }
 
 window.addEventListener('load', handleLoad);
