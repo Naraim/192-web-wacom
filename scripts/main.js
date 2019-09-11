@@ -13,9 +13,15 @@ function handleLoad(){
 
   function handleClick(event){
       if(event.srcElement.classList.contains('btnR')){
-        count++;
+        if(count < tape.childElementCount - 1) {
+          count++;
+        }
+
       }else if(event.srcElement.classList.contains('btnL')){
-        count--;
+        if(count > 0) {
+          count--;
+        }
+
       }
       console.log(count);
       tape.style.transform = 'translate('+ (-1*80*count) +'vw, 0)';

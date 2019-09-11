@@ -431,4 +431,16 @@ nav {
   .left{
     width: 100%;
   }
+
+  .subscribe{
+    padding: 40px 0;
+  }
+
+  .subscribe__title{
+    text-align: center;
+  }
+
+  .insertText{
+    padding: 10px 15px;
+  }
 }
