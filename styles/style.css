@@ -6,6 +6,15 @@
   color: black;
 }
 
+/* * { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); } */
 body {
   width: 80%;
   margin: 0 auto;
@@ -173,21 +182,59 @@ nav {
 /* ----------------------- Gallery ------------------------ */
 .gallery {
   overflow: hidden;
+  width: 100%;
 }
 
 .gallery__tape {
+  width: fit-content;
   display: flex;
-  align-items: flex-start;
+  flex-flow: row;
   transition: transform .3s ease-in-out;
-}
-
-.gallery__item {
-  width: 100%;
 }
 
 .gallery__tape--inactive {
   transition: none;
 }
+
+.gallery__item {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  height: 510px;
+}
+
+.gallery_image {
+  height: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 40vh;
+  z-index: 5;
+}
+
+.gallery__button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.gallery__button:focus {
+  outline: none;
+}
+
+.btnL {
+  max-width: 80%;
+}
+
+.btnR {
+  max-width: 80%;
+}
+
+
 
 /* --------------------- Specifications ------------- */
 .textBlock--charact {
@@ -216,14 +263,14 @@ nav {
 }
 
 .left {
-  width: 30%;
+  width: 40%;
   text-align: left;
   font-weight: 400;
   color: rgb(176, 176, 176);
 }
 
 .right {
-  width: 70%;
+  width: 60%;
   text-align: right;
   font-weight: 300;
   color: rgb(176, 176, 176);
@@ -313,7 +360,7 @@ nav {
 }
 
 /*---------------------------Intento de Media Query----------------------------*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .textBlock {
     flex-flow: column wrap;
     align-content: center;
@@ -323,7 +370,12 @@ nav {
     width: 100%;
   }
 
+  .mainText__title{
+    font-size: 30px;
+  }
+
   .mainText__subtitle {
+    font-size: 15px;
     width: 100%;
   }
 
@@ -335,9 +387,48 @@ nav {
     align-content: center;
     display: flex;
     flex-flow: column wrap;
+    padding: 40px 0;
   }
 
   .component {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .component__image{
+    width: 70%;
+  }
+
+  .textBlock--paper{
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .mainText__range{
+    padding-bottom: 20px;
+  }
+
+  .gallery__item{
+    height: 200px;
+  }
+
+  .buttons{
+    top: 18vh;
+  }
+
+  .textBlock--charact {
+    padding: 30px;
+  }
+
+  .table__item{
+    flex-flow: column;
+  }
+
+  .right{
+    width: 100%;
+  }
+
+  .left{
     width: 100%;
   }
 }

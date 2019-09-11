@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Livvic:300,400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="/img/icon.png" />
-  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
   <title>Wacom - Bamboo Folio</title>
 </head>
 
@@ -81,7 +81,8 @@
   <section class="textBlock textBlock--paper">
     <div class="mainText">
       <h2 class="mainText__title">Bamboo Paper</h2>
-      <p class="mainText__subtitle">Bamboo Paper, una aplicación que convierte tu dispositivo móvil en una libreta de papel; el complemento perfecto para la aplicación Wacom Inkspace. Con Bamboo Paper puedes editar y refinar fácilmente los pensamientos e ideas que has capturado.</p>
+      <p class="mainText__subtitle">Bamboo Paper, una aplicación que convierte tu dispositivo móvil en una libreta de papel; el complemento perfecto para la aplicación Wacom Inkspace. Con Bamboo Paper puedes editar y refinar fácilmente los
+        pensamientos e ideas que has capturado.</p>
       <input type="range" min="0" max="100" value="0" class="mainText__range">
     </div>
     <div class="mainImage">
@@ -91,13 +92,24 @@
 
   <!-- ::::::::::::::::::Start Gallery:::::::::::::::::::::::::::: -->
   <section class="gallery">
-    <div class="gallery__tape">
-        <img src="./img/gallery1.png" alt="" class="gallery__item">
-        <img src="./img/gallery1.png" alt="" class="gallery__item">
-        <img src="./img/gallery1.png" alt="" class="gallery__item">
-        <img src="./img/gallery1.png" alt="" class="gallery__item">
+    <!-- Button svg left -->
+    <div class="buttons">
+      <button type="button" name="click" class="gallery__button button__left">
+        <img src="./img/chevron-left@3x.png" alt="" class="btnL">
+      </button>
+      <!-- Button svg right -->
+      <button type="button" name="click" class="gallery__button button__right">
+        <img src="./img/chevron-right@3x.png" alt="" class="btnR">
+      </button>
     </div>
-    <button type="button" name="Click" class="gallery__button">Click me</button>
+    <div class="gallery__tape">
+      <div class="gallery__item"><img src="./img/gallery_image0.jpg" alt="" class="gallery_image"></div>
+      <div class="gallery__item"><img src="./img/gallery_image1.jpg" alt="" class="gallery_image"></div>
+      <div class="gallery__item"><img src="./img/gallery_image2.jpg" alt="" class="gallery_image"></div>
+      <div class="gallery__item"><img src="./img/gallery_image3.jpg" alt="" class="gallery_image"></div>
+      <div class="gallery__item"><img src="./img/gallery_image4.jpg" alt="" class="gallery_image"></div>
+      <div class="gallery__item"><img src="./img/gallery_image5.jpg" alt="" class="gallery_image"></div>
+    </div>
   </section>
 
   <!-- ::::::::::::::::::Start Specifications:::::::::::::::::::::::::::: -->
@@ -168,20 +180,21 @@
           <li class="menu__item"><a href="#" class="link">Asistencia Técnica</a></li>
           <li class="menu__item"><a href="#" class="link">Acerca de</a></li>
           <li class="menu__item"><a href="#" class="link">Comunidad</a></li>
-        </div>
-        <div class="social">
-          <a href="#"><img src="./img/twitter.png" alt="Twitter" class="social__item"></a>
-          <a href="#"><img src="./img/facebook.png" alt="Facebook" class="social__item"></a>
-          <a href="#"><img src="./img/youtube.png" alt="Youtube" class="social__item"></a>
-        </div>
+      </div>
+      <div class="social">
+        <a href="#"><img src="./img/twitter.png" alt="Twitter" class="social__item"></a>
+        <a href="#"><img src="./img/facebook.png" alt="Facebook" class="social__item"></a>
+        <a href="#"><img src="./img/youtube.png" alt="Youtube" class="social__item"></a>
+      </div>
     </div>
     <div class="theEnd__copyright">
 
       <p>Copyright © 2018-2019 Wacom. All Rights Reserved. All other trademarks are the property of their respective owners and are used with their permission.</p>
       <!-- <a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by ibrandify - www.freepik.com</a> -->
-    </p>
+      </p>
     </div>
   </footer>
   <script src="./scripts/main.js"></script>
 </body>
+
 </html>

@@ -1,15 +1,10 @@
 function handleLoad(){
   //-------------------------------------------Gallery ----------------------------------------
-  var button = document.querySelector('.gallery__button');
+  var buttonR = document.querySelector('.button__right');
+  var buttonL = document.querySelector('.button__left');
   var slider = document.querySelector('.gallery');
   var tape = slider.querySelector('.gallery__tape');
   var count = 0;
-
-  var first = tape.querySelector('.gallery__item');
-  var newLast = document.createElement('img');
-  newLast.setAttribute('src', first.getAttribute('src'));
-  newLast.classList.add('gallery__item');
-  tape.append(newLast);
 
   function handleLast(){
     tape.classList.add('gallery__tape--inactive');
@@ -17,19 +12,17 @@ function handleLoad(){
   }
 
   function handleClick(event){
-    count++;
-    if(count == 1){
-      tape.classList.remove('gallery__tape--inactive');
-    }
-
-    var mov = tape.offsetWidth * -1 * count;
-    tape.style.transform = 'translate(' + mov + 'px, 0px)';
-    if(count > tape.childElementCount -2){
-      setTimeout(handleLast,300);
-      count = 0;
-    }
+      if(event.srcElement.classList.contains('btnR')){
+        count++;
+      }else if(event.srcElement.classList.contains('btnL')){
+        count--;
+      }
+      console.log(count);
+      tape.style.transform = 'translate('+ (-1*80*count) +'vw, 0)';
   }
-  button.addEventListener('click', handleClick);
+
+  buttonR.addEventListener('click', handleClick);
+  buttonL.addEventListener('click', handleClick);
 
   // ----------------------------------- Bamboo paper ---------------------
 
@@ -49,6 +42,7 @@ function handleLoad(){
    }
 
    rangeSlider.addEventListener('input', handleRange);
+
 
 }
 
