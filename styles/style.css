@@ -25,7 +25,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   padding-top: 50px;
-  height: 120px;
+  padding-bottom: 50px;
 }
 
 .top__logo {
@@ -361,6 +361,32 @@ nav {
 
 /*---------------------------Intento de Media Query----------------------------*/
 @media screen and (max-width: 600px) {
+
+  body{
+    width: 90%;
+  }
+
+  .top{
+    flex-flow: column nowrap;
+  }
+
+  nav{
+    padding-top: 15px;
+    width: 100%;
+  }
+
+  .menu{
+    justify-content: space-between;
+  }
+
+  .menu__item{
+    padding: 5px;
+  }
+
+  .menu__item a{
+    font-size: 20px;
+  }
+
   .textBlock {
     flex-flow: column wrap;
     align-content: center;
@@ -375,7 +401,6 @@ nav {
   }
 
   .mainText__subtitle {
-    font-size: 15px;
     width: 100%;
   }
 
@@ -442,5 +467,18 @@ nav {
 
   .insertText{
     padding: 10px 15px;
+  }
+
+  .logoFooter{
+    width: 60%;
+    padding: 0;
+  }
+
+  .interestLinks{
+    padding: 20px 0;
+  }
+
+  .theEnd__copyright{
+    padding: 20px 0;
   }
 }
