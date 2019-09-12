@@ -189,6 +189,7 @@ nav {
   width: fit-content;
   display: flex;
   flex-flow: row;
+  transform: translate(-80vw,0);
   transition: transform .3s ease-in-out;
 }
 
@@ -288,8 +289,6 @@ nav {
 .title {
   padding-bottom: 30px;
 }
-
-.otherProduct__link {}
 
 /* ------------------------- Subscribe -------------------- */
 .subscribe {
