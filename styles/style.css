@@ -6,15 +6,6 @@
   color: black;
 }
 
-/* * { background-color: rgba(255,0,0,.2); }
-* * { background-color: rgba(0,255,0,.2); }
-* * * { background-color: rgba(0,0,255,.2); }
-* * * * { background-color: rgba(255,0,255,.2); }
-* * * * * { background-color: rgba(0,255,255,.2); }
-* * * * * * { background-color: rgba(255,255,0,.2); }
-* * * * * * * { background-color: rgba(255,0,0,.2); }
-* * * * * * * * { background-color: rgba(0,255,0,.2); }
-* * * * * * * * * { background-color: rgba(0,0,255,.2); } */
 body {
   width: 80%;
   margin: 0 auto;
@@ -60,8 +51,17 @@ nav {
   font-weight: 400;
 }
 
+.menu__icon{
+  display: none;
+  width: 30px;
+}
+
 .link {
   text-decoration: none;
+}
+
+.link:hover{
+  font-weight: bold;
 }
 
 .menu__item img {
@@ -370,20 +370,28 @@ nav {
   }
 
   nav{
-    padding-top: 15px;
+    padding-top: 30px;
     width: 100%;
   }
 
   .menu{
-    justify-content: space-between;
+    justify-content:  space-between;
   }
 
   .menu__item{
-    padding: 5px;
+    padding: 0 15px 10px 15px;
   }
 
   .menu__item a{
+    text-align: center;
     font-size: 20px;
+  }
+
+  .item__img{
+    max-width: 35px;
+    position: absolute;
+    top: 47px;
+    right: 9vw;
   }
 
   .textBlock {
